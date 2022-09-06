@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <title>Home</title>
+
+</head>
+
+<body>
+
+<% for (const val of data) { %>
+    <h3><%= val.id %></h3>
+    <p><%= val.name %></p>
+    <p><%= val.department %></p>
+    <br>
+<% } %>
+
+<form action="/view" method="POST" enctype="multipart/form-data">
+
+    <div class=”control-group”>
+
+        <div class="form-group floating-label-form-group controls">
+
+            <label>ID</label>
+
+            <input type="number" class="form-control" id="id" name="id">
+
+        </div>
+
+    </div>
+
+    <div class="form-group">
+
+        <button type="submit" class="btn btn-primary" >Submit</button></div>
+
+</form>
+
+</body>
+
+</html>
